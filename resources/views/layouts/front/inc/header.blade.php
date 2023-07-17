@@ -23,11 +23,14 @@
                 @endif
             @else
             
+            @if (auth()->user()->role == 1)
             <li class="nav-item"><a class="nav-link" href="{{route('manage.article')}}">Manage Article</a></li>
+            @endif
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
+            
 
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}"
@@ -52,7 +55,7 @@
 <header class="py-5 bg-light border-bottom mb-4">
     <div class="container">
         <div class="text-center my-5">
-            <p class="lead mb-0">Pusatnya anak-anak bau bawang</p>
+            <p class="lead mb-0">CIBAYYYYYYYYY</p>
         </div>
     </div>
 </header>

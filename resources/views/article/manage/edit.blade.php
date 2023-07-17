@@ -9,8 +9,9 @@
         </div>
     @endif
 
-    <form method="POST" action="{{ route('article.update', ['article' => $article->id]) }}" enctype="multipart/form-data">
+    <form method="post" action="{{ route('article.update', ['article' => $article->id]) }}" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="form-group">
             <label>Kategori</label>
             <select class="form-control" name="category">
